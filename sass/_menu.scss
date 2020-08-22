@@ -1,0 +1,107 @@
+.menu-btn {
+    position: fixed;
+    top: 2.5rem;
+    right: 2.5rem;
+    z-index: 1;
+    height: 30px;
+    width: 28px;
+    cursor: pointer;
+    @include transition-ease;
+    
+  
+    &-burger {
+      position: absolute;
+      top: 0.5rem;
+      right: 0;
+      width: 28px;
+      height: 3px;
+      background: #fff;
+      @include transition-ease;
+  
+      &::before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        width: 28px;
+        height: 3px;
+        background: #fff;
+        @include transition-ease;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        width: 28px;
+        height: 3px;
+        background: #fff;
+        @include transition-ease;
+      }
+      &.open {
+        transform: rotate(180deg);
+        background: transparent;
+  
+        &::before {
+          transform: rotate(45deg) translate(5px, 8px);
+        }
+        &::after {
+          transform: rotate(-45deg) translate(3px, -7px);
+        }
+      }
+    }
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    width: 100vw;
+    visibility: hidden;
+  
+    &.open {
+      visibility: visible;
+    }
+    .menu-nav {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      height: 100vh;
+      list-style-type: none;
+      background: $primary-color;
+      padding-right: 1rem;
+      transform: translateY(-100%);
+      @include transition-ease;
+  
+      &.open {
+        transform: translateY(0);
+      }
+      &-item {
+        transform: translateX(100vw);
+        @include transition-ease;
+        &.open {
+          transform: translateX(0);
+        }
+        &.active > a {
+          color: $secondary-color;
+        }
+      }
+      &-link {
+        display: inline-block;
+        font-size: 2rem;
+        text-transform: uppercase;
+        padding: 2rem 0;
+        font-weight: 250;
+        @include transition-ease;
+        &:hover{
+          @include transition-ease;
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+  @for $i from 1 through 4 {
+    .menu-nav-item:nth-child(#{$i}) {
+      transition-delay: ($i * 0.1s) + 0.20s;
+    }
+  }

@@ -1,0 +1,53 @@
+.contact {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(
+      to right,
+      rgba($primary-color, 0.9),
+      rgba($primary-color, 0.5)
+    ),
+    url("../images/picture1.jpeg") center top;
+  background-size: cover;
+  h2 {
+    font-size: 5rem;
+    margin-bottom: 4rem;
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  // &-email{
+
+  //     &:hover{
+  //      @include transition-ease;
+  //      padding-top: 1rem;
+  //     }
+  // }
+  // &-phone{
+
+  //     &:hover{
+  //      @include transition-ease;
+  //      padding-top: 1rem;
+  //     }
+  // }
+  // &-address{
+
+  //     &:hover{
+  //      @include transition-ease;
+  //      padding-top: 1rem;
+  //     }
+  // }
+  .icon {
+    position: fixed;
+    bottom: 0;
+    left: 16px;
+    margin-bottom: 12px;
+  }
+}

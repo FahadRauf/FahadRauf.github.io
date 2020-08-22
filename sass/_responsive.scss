@@ -1,0 +1,41 @@
+@include media-md {
+  
+    .about-bio {
+      font-size: 1.5rem;
+      
+    }
+    .projects {
+      &-image {
+        height: 40vh;
+      }
+      &-items {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .text-secondary {
+        font-size: 3rem;
+      }
+    }
+    .contact-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+   
+    
+  }
+  
+  @include media-lg {
+    .projects {
+      &-items {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .contact-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+   
+  }
+  
+  @include media-xl {
+    .projects-image {
+      height: 50vh;
+    }
+    }

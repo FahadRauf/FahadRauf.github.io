@@ -1,0 +1,70 @@
+.projects {
+  // height: 100vh;
+  background: linear-gradient(
+      to right,
+      rgba($primary-color, 0.9),
+      rgba($primary-color, 0.5)
+    ),
+    url("../images/background.jpg") center top;
+  background-size: cover;
+  padding-bottom: 2rem;
+
+  &-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    width: 100%;
+
+    h2 {
+      font-size: 5rem;
+      margin-bottom: 2rem;
+
+      .text-secondary {
+        font-size: 5rem;
+      }
+    }
+  }
+
+  &-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    width: 60vw;
+    margin: 2rem auto;
+  }
+  &-item {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 5px solid $secondary-color;
+    background: $primary-color;
+
+    img {
+      width: 100%;
+
+      &:hover {
+        @include transition-ease;
+        opacity: 0.5;
+      }
+    }
+    i {
+      &:hover {
+        @include transition-ease;
+        color: $secondary-color;
+      }
+    }
+  }
+  &-btns {
+    height: 100%;
+    width: 100%;
+    background: $primary-color;
+    padding: 0.5rem;
+    i {
+      width: 100%;
+    }
+  }
+  footer {
+    transform: rotate(90deg) translate(-3rem, -5rem);
+  }
+}

@@ -1,0 +1,67 @@
+.about {
+  height: 100vh;
+  // background: linear-gradient(
+  //     to right,
+  //     rgba($primary-color, 0.9),
+  //     rgba($primary-color, 0.5)
+  //   ),
+  //   url("../images/picture3.jpg") center top;
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  &-bio-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    width: 100%;
+
+    // p {
+    //   margin-top: 2rem;
+    //   margin-bottom: 2rem;
+    // }
+  }
+  &-bio {
+    width: 80%;
+    // text-align: center;
+
+    h2 {
+      padding: 2rem;
+      font-size: 5rem;
+    }
+    p {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+  .edu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    width: 80%;
+    margin: 2rem auto;
+    &-school {
+      background: $primary-color;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      line-height: 1.2;
+      border-top: 5px solid $secondary-color;
+
+      h2,
+      h3 {
+        margin: 0.5rem 0;
+      }
+      h6 {
+        margin: 0.3rem 0;
+        padding: 0.3rem;
+        font-size: 0.8rem;
+        color: lighten($secondary-color, 10%);
+      }
+    }
+  }
+
+  footer {
+    transform: rotate(90deg) translate(-3rem, -5rem);
+  }
+}

@@ -1,0 +1,27 @@
+.home {
+  height: 100%;
+  padding-top: 40vh;
+  text-align: center;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(
+      to right,
+      rgba($primary-color, 0.9),
+      rgba($primary-color, 0.5)
+    ),
+    url("../images/picture1.jpeg") center top;
+  background-size: cover;
+
+  &-name {
+    font-size: 6rem;
+    font-weight: 400;
+    padding-bottom: 0.8rem;
+
+    &-last {
+      color: $secondary-color;
+    }
+  }
+  h2 {
+    font-style: italic;
+  }
+}
